@@ -1,8 +1,128 @@
 <html>
-    <head>
-        <title>Home Page</title>
+
+<head>
+    <title>Home Page</title>
+
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        a {
+            color: #27AE60;
+            text-decoration: none;
+        }
+
+        .menu {
+
+            width: 100%;
+            list-style-type: none;
+            color: #FFF;
+            background-color: #27AE60;
+        }
+
+        .menu li {
+            display: block;
+            padding: 10px;
+        }
+
+        .menu>li {
+            display: inline-block;
+            width: 100px;
+        }
+
+        .menu li:hover {
+            background-color: #145A32;
+        }
+
+        .menu ul {
+            display: none;
+            position: absolute;
+            width: 100px;
+            background-color: white;
+            border: 1px solid #27AE60;
+            margin-left: -10px;
+            /*These margins creating proper spacing between the menu and the lists*/
+            margin-top: 10px;
+            padding: 0;
+        }
+
+        .menu li:hover ul {
+
+            display: block;
+        }
+    </style>
+    
 </head>
+
 <body>
-    <h1>Welcome to my Site</h1>
+    <!-- <h1>Welcome to my Site</h1>-->
+
+    <ul class="Menu">
+        <li>
+            File
+            <ul>
+                <li>
+                    <a href="#"> Open</a>
+                </li>
+                <li><a href="#"> Save</a></li>
+            </ul>
+        </li>
+        <li>
+            Options
+            <ul>
+                <li><a href="#"> Network</a></li>
+                <li><a href="#"> Social</a></li>
+            </ul>
+        </li>
+        <li>
+            Extras
+            <ul>
+                <li><a href="#" onclick=blueAction();>blue</a></li>
+                <li><a href="#" onclick=redAction();>red</a></li>
+                <li><a href="#" onclick=yellowAction();>yellow</a></li>
+                <li><a href="#" onclick=purpleAction();>purple</a></li>
+                <li><a href="#" onclick=greenAction();>green</a></li>
+            </ul>
+        </li>
+    </ul>
+    <h1>This is a work in progress</h1>
+    <script>
+        function blueAction() {
+            var stylesheet = document.styleSheets[0];
+            stylesheet.cssRules[3].style.backgroundColor = "blue";
+        }
+        function redAction() {
+
+            var stylesheet = document.styleSheets[0];
+            stylesheet.cssRules[3].style.backgroundColor = " #ff0000";
+
+        }
+        function yellowAction() {
+
+            var stylesheet = document.styleSheets[0];
+            stylesheet.cssRules[3].style.backgroundColor = "#ffff00";
+
+        }
+        function purpleAction() {
+
+            var stylesheet = document.styleSheets[0];
+            stylesheet.cssRules[3].style.backgroundColor = "#660066";
+
+        }
+        function greenAction() {
+
+            var stylesheet = document.styleSheets[0];
+            stylesheet.cssRules[3].style.backgroundColor = "#27AE60";
+
+        }
+    </script>
+
+
 </body>
+
 </html>
