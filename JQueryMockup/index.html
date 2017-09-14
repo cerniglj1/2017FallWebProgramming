@@ -10,7 +10,8 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
         crossorigin="anonymous">
-
+<!-- My CSS -->
+<link rel="stylesheet" href="main.css">
     <style type="text/css">
         * {
             box-sizing: border-box;
@@ -68,11 +69,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <h1>What do you meme</h1>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
     <div class="container">
         <div class="jumbotron">
             <h2>Welcome to the Meme challenge</h2>
@@ -183,9 +180,11 @@
     <!-- In javascript you can use fontSize or font-size, you can aso use it in quotes ('font-size') -->
     <script>
         $(function () {
+            $("#header-placeholder").load("_header.html");
+            
             $(".btn-primary").click(function () {
-                $(this).closest(".col-md-4").css({'max-width':'none'})
-                .animate({'flex-basis':'100%'})
+                $(this).closest(".col-md-4").css({ 'max-width': 'none' })
+                    .animate({ 'flex-basis': '100%' })
             })
         });
     </script>
