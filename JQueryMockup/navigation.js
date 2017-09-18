@@ -1,8 +1,9 @@
 $(function () {
-    $("#header-placeholder").load("_header.html",function (){
-
-        $(".nav-link").removeClass("active");
-        $(".nav-link[href=Signup.html]").addClass("active");
+    $("#header-placeholder").load("_header.html", function () {
+        $("#nav-placeholder").load(navProperties.mainNav, function () {
+            $(".nav-link").removeClass("active");
+            $("#${navProperties.currentSection}-link").addClass("active");
+        });
     });
 
     $(".btn-primary").click(function () {
