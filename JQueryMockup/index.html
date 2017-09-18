@@ -80,7 +80,7 @@
                 <div class="card">
                     <img class="card-img-top" src="picture.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title">Signup</h4>
+                        <h4 class="card-title" href="Signup.html" >Signup</h4>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
@@ -90,7 +90,7 @@
                 <div class="card">
                     <img class="card-img-top" src="picture.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title">Rules</h4>
+                        <h4 class="card-title" href="Rules.html">Rules</h4>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
@@ -102,7 +102,7 @@
                     <div class="card-body">
                         <h4 class="card-title">View Cool Memes</h4>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary" >Go somewhere</a>
                     </div>
                 </div>
             </div>
@@ -178,17 +178,8 @@
     </script>
     <!-- Thi is JQuery, the dollar sign represents it. The h1metho dis saying, find all h1's and do X to them, in this case i am animating them to have a larger font size -->
     <!-- In javascript you can use fontSize or font-size, you can aso use it in quotes ('font-size') -->
-    <script>
-        $(function () {
-            $("#header-placeholder").load("_header.html");
-            
-            $(".btn-primary").click(function () {
-                $(this).closest(".col-md-4").css({ 'max-width': 'none' })
-                    .animate({ 'flex-basis': '100%' })
-            })
-        });
-    </script>
-
+    <script scr="navigation.js">
+         </script>
 </body>
 
 </html>
