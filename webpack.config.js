@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -36,4 +37,14 @@ module.exports = {
         extractSass
     ],
     devtool: 'source-map'
+=======
+const path = require('path');
+
+module.exports = {
+  entry: './jquery-mockup/src/navigation.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'jquery-mockup/dist')
+  }
+>>>>>>> master
 };
