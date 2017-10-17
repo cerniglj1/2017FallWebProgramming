@@ -1,0 +1,133 @@
+<html>
+
+<head>
+    <title>Home Page</title>
+</head>
+
+<body>
+    <!-- <h1>Welcome to my Site</h1>-->
+
+    <style>
+        .container {
+            overflow: hidden;
+            background-color: #145A32;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container a {
+            float: left;
+            font-size: 16px;
+            color: #27AE60;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;
+            border-color: #27AE60;
+            border:none;
+            outline: none;
+            background-color: #FFF;
+				
+
+            outline-color: white;
+            color: #27AE60;
+            padding: 14px 16px;
+            background-color: inherit;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #27AE60;
+            /* margin-left: -3px;
+            margin-top: 3px;
+             padding: 0; */
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: #27AE60;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="dropdown">
+                <button class="dropbtn" onclick="FileDropdown()">File</button>
+                <div class="dropdown-content" id="FileDropdown">
+                    <a href="#">Open</a>
+                    <a href="#">Save</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="OptionsDropdown()">Options</button>
+                <div class="dropdown-content" id="OptionsDropdown">
+                    <a href="#">Network</a>
+                    <a href="#">Social</a>
+                </div>
+            </div>
+        </div>
+
+        <h1>Welcome to My site</h1>
+        <p>This is a paragraph </p>
+
+        <script>
+            /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+            function FileDropdown() {
+               // document.getElementById("FileDropdown").classList.toggle("show");
+                
+            }
+            function OptionsDropdown() {
+                //document.getElementById("OptionsDropdown").classList.toggle("show");
+            }
+           // Close the dropdown if the user clicks outside of it
+            window.onclick = function (e) {
+                if (!e.target.matches('.dropbtn')) {
+                    var optionsDropdown = document.getElementById("OptionsDropdown");
+                    var fileDropdown = document.getElementById("FileDropdown");
+                    if (fileDropdown.classList.contains('show')) {
+                        fileDropdown.classList.remove('show');
+                    }
+                    if (optionsDropdown.classList.contains('show')) {
+                        optionsDropdown.classList.remove('show');
+                    }
+                }
+            }
+        </script>
+
+
+
+    </body>
+
+</html>
