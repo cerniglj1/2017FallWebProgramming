@@ -9,6 +9,10 @@ header {
     margin-bottom: 10px;
 }
 
+.jumbotron {
+	background: rgb(181, 241, 215);
+}
+
 .card {
     .btn-primary {
         font-family: $monospace;
@@ -19,8 +23,8 @@ header {
 }
 
 .footer-distributed{
-	background-color: #292c2f;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	background-color: #042e1d;
+//	box-shadow: 0 1px 1px 0 rgba(3, 82, 58, 0.12);
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
@@ -52,7 +56,7 @@ header {
 }
 
 .footer-distributed h3 span{
-	color:  #5383d3;
+	color:  $primary-background;
 }
 
 /* Footer links */
@@ -84,7 +88,7 @@ header {
 }
 
 .footer-distributed .footer-center i{
-	background-color:  #33383b;
+	//background-color:  #33383b;
 	color: #ffffff;
 	font-size: 25px;
 	width: 38px;
@@ -116,7 +120,7 @@ header {
 }
 
 .footer-distributed .footer-center p a{
-	color:  #5383d3;
+	color:  $primary-background;
 	text-decoration: none;;
 }
 
@@ -152,7 +156,7 @@ header {
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #33383b;
+	background-color:  #07612d;
 	border-radius: 2px;
 
 	font-size: 20px;
