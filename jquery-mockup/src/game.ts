@@ -9,7 +9,7 @@ export class Player {
     quotes: Quote[] = [];
     score: number = 0;
 
-    drawQuotes(){
+    drawQuotes():void {
         $("#my-quotes").html(this.quotes.map(x=> `<li class="list-group-item">${x.text}</li>`).join(""))
     }
 }
