@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass": "node-sass jquery-mockup/src --output jquery-mockup/dist --watch",
-    "webpack:main": "webpack jquery-mockup/src/main.js jquery-mockup/dist/bundle.js --optimize-minimize --watch",
+    "webpack:main":
+      "webpack jquery-mockup/src/main.js jquery-mockup/dist/bundle.js --optimize-minimize --watch",
     "server": "nodemon --watch server server/index.js",
     "ng": "ng",
     "start": "ng serve",
