@@ -25,23 +25,19 @@ export class PlayComponent implements OnInit {
     }
 
     update(){
-        this.http.get(this.game.apiRoot + "/game/room/picture").subscribe( data => {
-            this.room.picture = data.text();
-        });
-        this.http.get(this.game.apiRoot + "/game/room/quotes").subscribe( data =>{
-            this.room.quotes = data.json();
+        this.http.get(this.game.apiRoot + "/game/room").subscribe( data =>{
+            this.room = data.json();
         });
     }
 
     flipPicture(e: MouseEvent){
         e.preventDefault();
         this.http.post(this.game.apiRoot + "/game/room/picture", {}).subscribe();
-        this.room.chosenQuote = null;
     }
     
     submitQuote(e: MouseEvent, quote: Quote, i: number){
         e.preventDefault();
-        const data = { text: quote.text };
+        const data = { text: quote.text, player: this.me.name };
         this.http.post(this.game.apiRoot + "/game/room/quotes", data).subscribe(res=>{
             this.me.quotes.splice(i, 1);
             this.me.quotes.push( res.json() );            
@@ -50,7 +46,11 @@ export class PlayComponent implements OnInit {
 
     chooseQuote(e: MouseEvent, i: number){
         e.preventDefault();
-        this.room.chosenQuote = i;
+        this.http.post(this.game.apiRoot + "/game/room/quotes/choose", { i: i }).subscribe(res=>{
+        })
     }
 
+    chosenQuote = ()=> this.room.quotes.find(x=> x.chosen);
+    myQuote = ()=> this.room.quotes.find(x=> x.player ==this.me.name);
+    
 }
