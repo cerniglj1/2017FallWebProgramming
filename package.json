@@ -7,7 +7,7 @@
     "sass": "node-sass jquery-mockup/src --output jquery-mockup/dist --watch",
     "webpack:main": "webpack jquery-mockup/src/main.js jquery-mockup/dist/bundle.js --optimize-minimize --watch",
     "server": "nodemon --watch server server/index.js",
-    "ng:c9": "ng serve --public what-do-you-meme-jewpaltz-1.c9users.io:8080 --host $IP --port $PORT",
+    "ng:c9": "ng serve --public fallwebprogramming2017-zessed.c9users.io:8080 --host $IP --port $PORT",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -50,6 +50,7 @@
     "style-loader": "^0.18.2",
     "ts-loader": "^2.3.7",
     "nodemon": "^1.12.1",
+
     "@angular/cli": "1.5.0",
     "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
@@ -68,5 +69,6 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "typescript": "~2.4.2"
+
   }
 }
